@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 200;
@@ -8,32 +10,64 @@
 
 body {
   transition: 1s;
+  background-color: #ffffff;
+
+  overflow: hidden;
 }
 
 h1 {
+  color: #090000;
   text-align: center;
 }
 
 .wrapper {
-  height: 100vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
 }
 
 button {
-  padding: 8px;
-  background: #000000;
+  background-color: #bc38d3;
   color: #ffffff;
   border: none;
   border-radius: 3px;
-  font-size: 1em;
+  font-size: 1.5em;
   margin-top: 1%;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 15px;
+
   outline: none;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
 }
 
 button:hover {
-  background: rgb(45, 50, 102);
+  background: #8f04a8;
+}
+
+button:focus {
+  outline: none;
+}
+
+button .circle {
+  position: absolute;
+  background-color: #ffffff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
 }
